@@ -176,11 +176,11 @@ public class SellerDaoJDBC implements SellerDao{
 			
 			while(rs.next()) {
 				
-				Department dep = map.get(rs.getInt("Department.Id"));
+				Department dep = map.get(rs.getInt("DepartmentId"));
 				
 				if(dep == null) {
 					dep = instantiateDepartment(rs);
-					map.put(rs.getInt("Department.Id"), dep);
+					map.put(rs.getInt("DepartmentId"), dep);
 				}
 				
 				Seller obj = instantiateSeller(rs, dep);	
@@ -218,11 +218,11 @@ public class SellerDaoJDBC implements SellerDao{
 			
 			while(rs.next()) {
 				
-				Department dep = map.get(rs.getInt("Department.Id"));
+				Department dep = map.get(rs.getInt("DepartmentId"));
 				
 				if(dep == null) {
 					dep = instantiateDepartment(rs);
-					map.put(rs.getInt("Department.Id"), dep);
+					map.put(rs.getInt("DepartmentId"), dep);
 				}
 				
 				Seller obj = instantiateSeller(rs, dep);	
